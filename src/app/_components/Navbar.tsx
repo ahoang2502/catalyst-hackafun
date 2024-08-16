@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 export const Navbar = () => {
   return (
-    <div className="h-[50px] w-full bg-pink-300 flex items-center justify-between px-6 space-x-6">
+    <div className="h-[50px] bg-pink-300 w-full flex items-center justify-between px-6 space-x-6">
       <div className="flex justify-center items-center space-x-2">
         <Logo />
         <p className="text-sm">Name</p>
