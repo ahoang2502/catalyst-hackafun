@@ -1,10 +1,11 @@
 import { UserButton } from "@clerk/nextjs";
 import React from "react";
+import { FeaturesNavbar } from "./FeaturesNavbar";
 
 const FeaturesPage = () => {
   return (
-    <div>
-      <UserButton afterSwitchSessionUrl="/features" />
+    <div className="">
+      <FeaturesNavbar />
     </div>
   );
 };

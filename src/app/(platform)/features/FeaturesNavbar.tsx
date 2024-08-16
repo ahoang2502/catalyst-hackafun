@@ -2,10 +2,11 @@ import Link from "next/link";
 import React from "react";
 
 import { navbarItems } from "@/lib/constants";
-import { Logo } from "./Logo";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/app/_components/Logo";
+import { UserButton } from "@clerk/nextjs";
 
-export const Navbar = () => {
+export const FeaturesNavbar = () => {
   return (
     <div className="h-[50px] bg-pink-300 w-full flex items-center justify-between px-6 space-x-6 border-b-pink-400 border-b-2">
       <div className="flex justify-center items-center space-x-2">
@@ -26,14 +27,7 @@ export const Navbar = () => {
           ))}
         </div>
 
-        <Button
-          className="rounded-full border"
-          size="sm"
-          variant="yellow"
-          asChild
-        >
-          <Link href="/features">Sign up</Link>
-        </Button>
+          <UserButton afterSwitchSessionUrl="/"  />
       </div>
     </div>
   );
