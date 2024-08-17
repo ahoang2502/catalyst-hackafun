@@ -18,10 +18,10 @@ export const Hero = () => {
             <TypewriterComponent
               options={{
                 strings: [
-                  "Go anywhere anytime.",
-                  "Leave reviews anywhere you go.",
-                  "Enjoy it together",
-                  "Feature 3.",
+                  // "Go anywhere anytime.",
+                  // "Leave reviews anywhere you go.",
+                  "Music is better when it's accessible.",
+                  "Live music, for everyone.",
                 ],
                 autoStart: true,
                 loop: true,
@@ -30,9 +30,7 @@ export const Hero = () => {
           </div>
 
           <p className="">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium
-            mollitia aut laboriosam accusamus? Alias, quam aut labore hic magnam
-            repellendus reprehenderit id cum dolor non, mollitia ullam.
+            Live music should be something everyone can enjoy. Right now, it's not. FindMine connects users to a map of accessible live music venues around Victoria, using authentic data.
           </p>
 
           <div className="mt-6 space-y-2">
