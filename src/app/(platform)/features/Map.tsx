@@ -1,14 +1,17 @@
 "use client";
 
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
 import "leaflet-defaulticon-compatibility";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import "leaflet/dist/leaflet.css";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 export default function MyMap(props: any) {
   const { position, zoom } = props;
@@ -33,8 +36,8 @@ export default function MyMap(props: any) {
       />
 
       {data.map((item) => (
-        <Popover key={item[0]}>
-          <PopoverTrigger>
+        <Dialog key={item[0]}>
+          <DialogTrigger>
             <Marker position={item}>
               <Popup>
                 <h3 className="text-sm font-bold underline hover:cursor-pointer">
@@ -43,10 +46,13 @@ export default function MyMap(props: any) {
                 <p className="">{data}</p>
               </Popup>
             </Marker>
-          </PopoverTrigger>
+          </DialogTrigger>
 
-          <PopoverContent>Helllodeedjend</PopoverContent>
-        </Popover>
+          <DialogContent>
+            <DialogTitle>Location Name</DialogTitle>
+            <DialogHeader>Location description</DialogHeader>
+          </DialogContent>
+        </Dialog>
       ))}
     </MapContainer>
   );

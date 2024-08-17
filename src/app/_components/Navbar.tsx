@@ -1,11 +1,11 @@
-import Link from "next/link";
-import React from "react";
 import { auth } from "@clerk/nextjs/server";
+import Link from "next/link";
 
-import { navbarItems } from "@/lib/constants";
-import { Logo } from "./Logo";
 import { Button } from "@/components/ui/button";
+import { navbarItems } from "@/lib/constants";
 import { UserButton } from "@clerk/nextjs";
+import { Logo } from "./Logo";
+import { NavbarItems } from "./NavbarItems";
 
 export const Navbar = () => {
   const { userId }: { userId: string | null } = auth();
@@ -15,17 +15,7 @@ export const Navbar = () => {
       <Logo />
 
       <div className="max-w-7xl w-full flex items-center justify-end space-x-4">
-        <div className="min-w-[300px] flex items-center justify-between">
-          {navbarItems.map((item) => (
-            <div className="group" key={item.value}>
-              <Link href={item.href} className="text-sm font-medium">
-                {item.value}
-              </Link>
-
-              <div className="h-1 w-0 group-hover:w-full transition-all bg-[#2196cb] rounded-full" />
-            </div>
-          ))}
-        </div>
+        <NavbarItems />
 
         {!userId ? (
           <Button

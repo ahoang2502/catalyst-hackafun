@@ -7,7 +7,7 @@ export async function getMarkers() {
   try {
     await db();
     const data = await Marker.find();
-    console.log({ data });
+    
     return JSON.parse(JSON.stringify(data));
   } catch (error) {
     console.log(error);

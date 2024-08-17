@@ -14,8 +14,6 @@ export const LocationCard = ({ location }: any) => {
     reviews: [],
   };
 
-  console.log({ location });
-
   return (
     <div className="p-4 space-y-2 flex justify-between space-x-4">
       <div className="relative size-32 rounded-lg">
