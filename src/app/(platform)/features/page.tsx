@@ -20,8 +20,9 @@ const FeaturesPage = () => {
 
   return (
     <div className="grid grid-cols-2 h-full ">
-      <div className="mt-4">
+      <div className="mt-4 space-y-2">
         <LocationCard />
+       
       </div>
       <MyMap />
     </div>
