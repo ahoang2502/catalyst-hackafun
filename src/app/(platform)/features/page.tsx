@@ -1,10 +1,12 @@
 import { Loader2 } from "lucide-react";
 import dynamic from "next/dynamic";
 import { useMemo } from "react";
+
+import { getMarkers } from "@/lib/actions/marker.actions";
 import { LocationCard } from "./LocationCard";
 import { ReviewCard } from "./ReviewCard";
 
-const FeaturesPage = () => {
+const FeaturesPage = async () => {
   const MyMap = useMemo(
     () =>
       dynamic(() => import("@/app/(platform)/features/Map"), {
@@ -18,6 +20,8 @@ const FeaturesPage = () => {
       }),
     []
   );
+
+  const data = await getMarkers();
 
   return (
     <div className="grid grid-cols-2 h-full ">
