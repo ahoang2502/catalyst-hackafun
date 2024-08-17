@@ -32,10 +32,10 @@ export default function MyMap(props: any) {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
 
-      {data.map((data) => (
-        <Popover>
+      {data.map((item) => (
+        <Popover key={item[0]}>
           <PopoverTrigger>
-            <Marker position={data}>
+            <Marker position={item}>
               <Popup>
                 <h3 className="text-sm font-bold underline hover:cursor-pointer">
                   Location Name
