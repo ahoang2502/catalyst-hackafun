@@ -4,14 +4,13 @@ import React from "react";
 
 export const Logo = () => {
   return (
-    <div className="size-8 relative shrink-0">
-      <Link href="/" className="flex items-center justify-center">
-        <Image
-          src="/logo.svg"
-          fill
-          alt="logo"
-          className="shrink-0 hover:opacity-75 transition size-8"
-        />
+    <div className="">
+      <Link href="/" className="flex items-center">
+        <div className="relative size-8 mr-2">
+          <Image src="/logo.svg" fill alt="logo" />
+        </div>
+
+        <h3 className="font-medium text-lg">Name</h3>
       </Link>
     </div>
   );

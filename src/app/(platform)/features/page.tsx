@@ -14,8 +14,6 @@ const FeaturesPage = () => {
 
   return (
     <div className="">
-      <FeaturesNavbar />
-
       <MyMap />
     </div>
   );
