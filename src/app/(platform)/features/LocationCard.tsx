@@ -36,9 +36,7 @@ export const LocationCard = () => {
         </div>
 
         <div className="pt-2">
-          <p className="text-xs text-slate-700">
-            Venue type: {data.type}
-          </p>
+          <p className="text-xs text-slate-700">Venue type: {data.type}</p>
         </div>
       </div>
     </div>

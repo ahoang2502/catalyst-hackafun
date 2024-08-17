@@ -4,3 +4,8 @@ import { twMerge } from "tailwind-merge"
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
+
+export const getYear = () => {
+  const dateNow = new Date();
+  return dateNow.getFullYear();
+};

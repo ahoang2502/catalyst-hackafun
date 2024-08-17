@@ -10,7 +10,7 @@ export const Logo = () => {
           <Image src="/logo.svg" fill alt="logo" />
         </div>
 
-        <h3 className="font-medium text-lg">Name</h3>
+        <h3 className="font-medium text-lg">FindMine</h3>
       </Link>
     </div>
   );

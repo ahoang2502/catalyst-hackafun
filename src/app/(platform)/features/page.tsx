@@ -2,6 +2,7 @@ import { Loader2 } from "lucide-react";
 import dynamic from "next/dynamic";
 import { useMemo } from "react";
 import { LocationCard } from "./LocationCard";
+import { ReviewCard } from "./ReviewCard";
 
 const FeaturesPage = () => {
   const MyMap = useMemo(
@@ -22,7 +23,7 @@ const FeaturesPage = () => {
     <div className="grid grid-cols-2 h-full ">
       <div className="mt-4 space-y-2">
         <LocationCard />
-       
+        <ReviewCard />
       </div>
       <MyMap />
     </div>
