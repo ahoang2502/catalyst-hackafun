@@ -5,6 +5,7 @@ import { useMemo } from "react";
 import { getMarkers } from "@/lib/actions/marker.actions";
 import { LocationCard } from "./LocationCard";
 import { ReviewCard } from "./ReviewCard";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 const FeaturesPage = async () => {
   const MyMap = useMemo(
@@ -25,10 +26,13 @@ const FeaturesPage = async () => {
 
   return (
     <div className="grid grid-cols-2 h-full ">
-      <div className="mt-4 space-y-2">
-        <LocationCard />
+      <ScrollArea className="space-y-2 h-full">
+        {data.map((location: any) => (
+          <LocationCard location={location} key={location.name} />
+        ))}
         <ReviewCard />
-      </div>
+      </ScrollArea>
+
       <MyMap />
     </div>
   );

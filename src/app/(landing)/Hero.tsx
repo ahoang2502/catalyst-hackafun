@@ -12,16 +12,16 @@ export const Hero = () => {
   return (
     <div className="h-96 flex justify-center items-center px-3 mt-12">
         <div className="hidden md:block space-y-4 max-w-[700px]">
-          <h2 className="text-7xl font-medium">Hero Title</h2>
+          <h2 className="text-7xl font-medium">FindMine</h2>
 
           <div className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-4xl font-bold">
             <TypewriterComponent
               options={{
                 strings: [
-                  "Feature 1.",
-                  "Feature 2.",
+                  "Go anywhere anytime.",
+                  "Leave reviews anywhere you go.",
+                  "Enjoy it together",
                   "Feature 3.",
-                  "Feature 4.",
                 ],
                 autoStart: true,
                 loop: true,
