@@ -18,10 +18,8 @@ export const Hero = () => {
             <TypewriterComponent
               options={{
                 strings: [
-                  // "Go anywhere anytime.",
-                  // "Leave reviews anywhere you go.",
                   "Music is better when it's accessible.",
-                  "Live music, for everyone.",
+                  "Live music, for everyone."
                 ],
                 autoStart: true,
                 loop: true,
