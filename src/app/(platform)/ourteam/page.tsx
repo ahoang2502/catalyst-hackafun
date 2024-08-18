@@ -4,24 +4,24 @@ import React from "react";
 const OurTeamPage = () => {
   const teamMembers = [
     {
-      name: "hello",
-      github: "woow",
+      name: "Yap Ray Ern",
+      github: "RayYRE",
     },
     {
-      name: "hello",
+      name: "Anh Hoang",
       github: "ahoang2502",
     },
     {
-      name: "hello",
-      github: "woowow",
+      name: "Jingliang Zhou",
+      github: "HEMIYUZ",
     },
     {
-      name: "hello",
-      github: "edklwek",
+      name: "Warren Kuah",
+      github: "W-Kuah",
     },
     {
-      name: "hello",
-      github: "dewdewdewd",
+      name: "Dominic Lye",
+      github: "dominiclye",
     },
   ];
 
