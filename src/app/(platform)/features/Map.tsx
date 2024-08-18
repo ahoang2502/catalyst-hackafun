@@ -4,7 +4,7 @@ import { Rating } from "@smastrom/react-rating";
 import "leaflet-defaulticon-compatibility";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import "leaflet/dist/leaflet.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
 import { Button } from "@/components/ui/button";
@@ -20,6 +20,7 @@ import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Textarea } from "@/components/ui/textarea";
 import toast from "react-hot-toast";
+import { getMarkers } from "@/lib/actions/marker.actions";
 
 export default function MyMap(props: any) {
   const [rating, setRating] = useState(5);
@@ -36,10 +37,36 @@ export default function MyMap(props: any) {
     [30, -0.07],
   ];
 
+    const [coordinates, setCoordinates] = useState([]);
+    useEffect(() => {
+      const getMarkerLocation = async () => {
+        try {
+          const markerData = await getMarkers();
+          const latLngData = [] as any;
+          markerData.map((item: any) => {
+            latLngData.push(item.coordinates);
+          });
+
+          setCoordinates(latLngData);
+
+          console.log({latLngData})
+        } catch (error) {
+          console.log(error);
+        }
+      };
+      // const data = getMarkerLocation();
+      // const coordinates = [];
+      // data.map((item: any) => {
+      //   coordinates.push(item.coordinates);
+      // })
+
+      getMarkerLocation();
+    }, []); 
+
   return (
     <MapContainer
-      center={[51, -0.09]}
-      zoom={2}
+      center={[-37.811235398938436, 144.9683349834688]}
+      zoom={15}
       scrollWheelZoom={false}
       className="h-[100vh] z-[10]"
     >
@@ -48,7 +75,7 @@ export default function MyMap(props: any) {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
 
-      {data.map((item) => (
+      {coordinates.map((item) => (
         <Dialog key={item[0]}>
           <DialogTrigger>
             <Marker position={item}>
