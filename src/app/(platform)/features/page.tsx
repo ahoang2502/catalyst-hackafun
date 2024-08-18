@@ -26,12 +26,14 @@ const FeaturesPage = async () => {
 
   return (
     <div className="grid grid-cols-2 h-full ">
-      <ScrollArea className="space-y-2 h-full">
-        {data.map((location: any) => (
-          <LocationCard location={location} key={location.name} />
-        ))}
-        <ReviewCard />
-      </ScrollArea>
+      <div className="flex items-center justify-center h-full">
+        <ScrollArea className="space-y-2 h-[750px]">
+          {data.map((location: any) => (
+            <LocationCard location={location} key={location.name} />
+          ))}
+          <ReviewCard />
+        </ScrollArea>
+      </div>
 
       <MyMap />
     </div>
