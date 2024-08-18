@@ -3,8 +3,8 @@ import { HomeIcon } from "lucide-react";
 export const navbarItems = [
   { href: "/", value: "Home", icon: HomeIcon },
   { href: "/features", value: "Features" },
-  { href: "/ourteam", value: "Our Team" },
   { href: "/contact", value: "Contact" },
+  { href: "/ourteam", value: "Our Team" },
 ];
 
 export const testimonials = [
