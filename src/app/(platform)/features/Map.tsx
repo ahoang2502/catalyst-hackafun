@@ -1,12 +1,13 @@
 "use client";
 
+import { Rating } from "@smastrom/react-rating";
 import "leaflet-defaulticon-compatibility";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import "leaflet/dist/leaflet.css";
 import { useState } from "react";
-import { Rating } from "@smastrom/react-rating";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -18,7 +19,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
+import toast from "react-hot-toast";
 
 export default function MyMap(props: any) {
   const [rating, setRating] = useState(5);
@@ -101,7 +102,9 @@ export default function MyMap(props: any) {
               </div>
 
               <div className="w-full flex justify-end">
-                <Button className="mt-3 text-right" variant="blue">
+                <Button className="mt-3 text-right" variant="blue" onClick={() =>{
+                  toast.success("Thank you! Your response has been submitted!");
+                }}>
                   Submit
                 </Button>
               </div>

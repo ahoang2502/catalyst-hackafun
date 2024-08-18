@@ -31,7 +31,7 @@ const FeaturesPage = async () => {
           {data.map((location: any) => (
             <LocationCard location={location} key={location.name} />
           ))}
-          <ReviewCard />
+          {/* <ReviewCard /> */}
         </ScrollArea>
       </div>
 
